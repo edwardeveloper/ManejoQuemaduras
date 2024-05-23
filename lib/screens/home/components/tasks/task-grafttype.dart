@@ -35,28 +35,11 @@ class GraftTypeTasks extends StatelessWidget {
                     ),
                   ),
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.only(right: 25.0),
-                //   child: AnimatedOpacity(
-                //       duration: _animationDuration,
-                //       opacity: _.tasksTitleOpacity,
-                //       child: IconButton(
-                //           icon: Icon(FontAwesomeIcons.checkDouble,
-                //               size: 22.5,
-                //               color: _isDark
-                //                   ? kBackgroundColor.withOpacity(0.5)
-                //                   : Colors.black.withOpacity(0.3)),
-                //           onPressed: () async {
-                //             await Future.delayed(Duration(milliseconds: 111));
-                //             doneAllTasks();
-                //           })),
-                // ),
               ],
             ),
             SizedBox(
               height: 20,
             ),
-            // HomeTasksItems()
           ],
         ),
       );

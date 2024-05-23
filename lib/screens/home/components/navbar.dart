@@ -55,20 +55,6 @@ class HomeNavbar extends StatelessWidget {
                 },
               ),
             ),
-            // AnimatedOpacity(
-            //   duration: _animationSpeed,
-            //   opacity: _.navbarOpacity2,
-            //   child: IconButton(
-            //     icon: Icon(
-            //       FontAwesomeIcons.search,
-            //       color: _isDark
-            //           ? kBackgroundColor
-            //           : Colors.black.withOpacity(0.40),
-            //       size: 22.2,
-            //     ),
-            //     onPressed: () {},
-            //   ),
-            // ),
           ],
         ),
       );
