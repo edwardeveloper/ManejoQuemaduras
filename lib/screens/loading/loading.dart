@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/constants/routes.dart';
-import 'package:proyectoaula/controllers/main-controller.dart';
 import 'package:proyectoaula/models/set-system-overlay-style.dart';
 import 'package:proyectoaula/constants/types.dart';
 import 'package:proyectoaula/screens/loading/animations.dart';

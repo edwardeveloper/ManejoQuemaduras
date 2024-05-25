@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:proyectoaula/constants/routes.dart';
 import 'package:proyectoaula/controllers/home/home-controller.dart';
 import 'package:proyectoaula/screens/home/components/drawer/items/item.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class DrawerItems extends StatelessWidget {
   @override
@@ -100,20 +99,5 @@ class DrawerItems extends StatelessWidget {
             }),
       ],
     );
-  }
-
-  DrawerItem(String s, IconData checkDouble, Future<Null> Function() param2) {}
-}
-
-Future<void> _launchInBrowser(String url) async {
-  try {
-    await launch(
-      url,
-      forceSafariVC: false,
-      forceWebView: false,
-      headers: <String, String>{'my_header_key': 'my_header_value'},
-    );
-  } catch (e) {
-    throw 'Could not launch $url';
   }
 }

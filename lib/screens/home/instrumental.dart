@@ -10,61 +10,21 @@ import 'package:proyectoaula/controllers/home/home-controller.dart';
 import 'package:proyectoaula/screens/home/components/drawer/drawer.dart';
 import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'components/tasks/task-supplies.dart';
-import 'components/title-supplies.dart';
 
-class InstrumentalScreen extends StatelessWidget {
+class InstrumentalScreen extends StatefulWidget {
+  @override
+  State<InstrumentalScreen> createState() => _InstrumentalScreenState();
+}
+
+class _InstrumentalScreenState extends State<InstrumentalScreen> {
   HomeController homeController = Get.put(HomeController());
+
   HomeAnimationsController homeAnimationsController =
       Get.put(HomeAnimationsController());
+
   int num = 0;
+
   bool _isDark;
-  List<Map<String, dynamic>> supplies = [
-    {
-      "title": "Equipo de plastia ",
-      "description": "",
-      "image": "assets/images/plastia1.jpg",
-    },
-    {
-      "title": "Heparina: ",
-      "description": "control de sangrado",
-      "image": "assets/images/heparina.jpeg",
-    },
-    {
-      "title": "Compresas",
-      "description": "",
-      "image": "assets/images/compresa.jpg",
-    },
-    {
-      "title": "Vendas elásticas y vendas de algodón  ",
-      "description": "",
-      "image": "assets/images/elastica.jpg",
-    },
-    {
-      "title": "Sulfadiazina de plata:  ",
-      "description": "curaciones iniciales",
-      "image": "assets/images/sulfadiazina.jpeg",
-    },
-    {
-      "title": "Nitrofurazona:  ",
-      "description": "etapa de cicatrización",
-      "image": "assets/images/nitrofurazon.jpeg",
-    },
-    {
-      "title": "Vaselina ",
-      "description": "",
-      "image": "assets/images/vaselina.jpg",
-    },
-    {
-      "title": "Hojas de bisturí",
-      "description": "",
-      "image": "assets/images/hojas.jpg",
-    },
-    {
-      "title": "Suturas para fijar los injertos: : ",
-      "description": "monocryl 3/0 4/0 o polipropileno 3/0 4/0 ",
-      "image": "assets/images/suturas.jpg",
-    }
-  ];
 
   List<Map<String, dynamic>> instrumental = [
     {

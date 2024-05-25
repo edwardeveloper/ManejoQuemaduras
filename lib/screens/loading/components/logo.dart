@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/screens/loading/animations.dart';
 
+// ignore: must_be_immutable
 class LoadingLogo extends StatelessWidget {
   bool isDark;
   LoadingLogo({this.isDark});

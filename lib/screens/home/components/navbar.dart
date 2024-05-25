@@ -8,6 +8,7 @@ import 'package:proyectoaula/models/set-system-overlay-style.dart';
 import 'package:proyectoaula/screens/home/animations.dart';
 import 'package:proyectoaula/controllers/home/home-controller.dart';
 
+// ignore: must_be_immutable
 class HomeNavbar extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   Duration _animationSpeed = Duration(milliseconds: 300);

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/constants/types.dart';
 import 'package:proyectoaula/models/set-system-overlay-style.dart';
@@ -12,6 +11,7 @@ import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'components/tasks/task-supplies.dart';
 import 'components/title-supplies.dart';
 
+// ignore: must_be_immutable
 class SuppliesScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =
@@ -60,33 +60,9 @@ class SuppliesScreen extends StatelessWidget {
       "image": "assets/images/hojas.jpg",
     },
     {
-      "title": "Suturas para fijar los injertos: : ",
+      "title": "Suturas para fijar los injertos: ",
       "description": "monocryl 3/0 4/0 o polipropileno 3/0 4/0 ",
-      "image": "assets/images/suturas.jpg",
-    }
-  ];
-
-  List<Map<String, dynamic>> instrumental = [
-    {
-      "title": "Dermatomo de Padgett",
-      "description": "",
-      "image": "assets/images/padgett.jpeg",
-    },
-    {
-      "title": "Dermatomo de Zimmer ",
-      "description": "",
-      "image": "assets/images/zimmer.jpeg",
-    },
-    {
-      "title":
-          "Dermatomo de Watson\nDermatomo de Silver\nDermatomo de Rosenburg\nDermatomo de Goulian",
-      "description": "",
-      "image": "assets/images/varios.jpeg",
-    },
-    {
-      "title": "Expansor de injertos ",
-      "description": "",
-      "image": "assets/images/expansorinjertos.jpeg",
+      "image": "assets/images/monocry.jpg",
     }
   ];
 
@@ -187,39 +163,6 @@ class SuppliesScreen extends StatelessWidget {
                       title: supplies[0]["title"],
                       description: supplies[0]["description"],
                       imageUrl: supplies[0]["image"],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 20, left: 25),
-                      child: RichText(
-                        text: TextSpan(
-                          text: "Equipos e instrumental especializados",
-                          style: GoogleFonts.ubuntu(
-                            fontSize: 30,
-                            color: _isDark ? kBackgroundColor : Colors.black,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[0]["title"],
-                      description: instrumental[0]["description"],
-                      imageUrl: instrumental[0]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[1]["title"],
-                      description: instrumental[1]["description"],
-                      imageUrl: instrumental[1]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[2]["title"],
-                      description: instrumental[2]["description"],
-                      imageUrl: instrumental[2]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[3]["title"],
-                      description: instrumental[3]["description"],
-                      imageUrl: instrumental[3]["image"],
                     ),
                   ],
                 ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/constants/types.dart';
 import 'package:proyectoaula/models/set-system-overlay-style.dart';
@@ -12,6 +11,7 @@ import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'components/tasks/task-treatments.dart';
 import 'components/title-treatments.dart';
 
+// ignore: must_be_immutable
 class TreatmentsScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =

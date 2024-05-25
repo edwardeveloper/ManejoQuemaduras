@@ -9,9 +9,9 @@ import 'package:proyectoaula/controllers/home/home-controller.dart';
 import 'package:proyectoaula/screens/home/components/drawer/drawer.dart';
 import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'package:proyectoaula/screens/home/components/tasks/task-treatments.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class BibliographyScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =
@@ -138,18 +138,5 @@ class BibliographyScreen extends StatelessWidget {
         );
       },
     );
-  }
-}
-
-Future<void> _launchInBrowser(String url) async {
-  try {
-    await launch(
-      url,
-      forceSafariVC: false,
-      forceWebView: false,
-      headers: <String, String>{'my_header_key': 'my_header_value'},
-    );
-  } catch (e) {
-    throw 'Could not launch $url';
   }
 }

@@ -11,6 +11,7 @@ import 'package:proyectoaula/screens/home/components/drawer/drawer.dart';
 import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'components/title-grafttypes.dart';
 
+// ignore: must_be_immutable
 class GraftTypesScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =

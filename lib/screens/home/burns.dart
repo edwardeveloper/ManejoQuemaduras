@@ -10,6 +10,7 @@ import 'package:proyectoaula/screens/home/components/drawer/drawer.dart';
 import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'package:proyectoaula/screens/home/components/title-burns.dart';
 
+// ignore: must_be_immutable
 class BurnsScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =

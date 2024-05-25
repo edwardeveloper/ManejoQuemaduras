@@ -11,6 +11,7 @@ import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'package:proyectoaula/screens/home/components/tasks/tasks.dart';
 import 'package:proyectoaula/screens/home/components/title-text.dart';
 
+// ignore: must_be_immutable
 class HomeScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =

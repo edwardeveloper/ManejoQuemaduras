@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:proyectoaula/constants/colors.dart';
-import 'package:proyectoaula/screens/home/animations.dart';
 
+// ignore: must_be_immutable
 class TreatmentsTasks extends StatelessWidget {
   Duration _animationDuration = Duration(milliseconds: 500);
   bool _isDark;

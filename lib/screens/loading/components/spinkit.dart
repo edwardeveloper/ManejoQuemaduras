@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/screens/loading/animations.dart';
 
+// ignore: must_be_immutable
 class LoadingSpinkit extends StatelessWidget {
   bool isDark;
   LoadingSpinkit({this.isDark});

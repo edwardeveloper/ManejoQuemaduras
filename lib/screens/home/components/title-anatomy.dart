@@ -5,6 +5,7 @@ import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/controllers/main-controller.dart';
 import 'package:proyectoaula/screens/home/animations.dart';
 
+// ignore: must_be_immutable
 class AnatomyTitleText extends StatelessWidget {
   MainController mainController = Get.put(MainController());
   Duration _animationDuration = Duration(milliseconds: 750);

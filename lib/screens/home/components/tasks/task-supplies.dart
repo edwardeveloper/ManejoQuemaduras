@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:proyectoaula/constants/colors.dart';
-import 'package:proyectoaula/screens/home/animations.dart';
 
+// ignore: must_be_immutable
 class SuppliesTasks extends StatelessWidget {
-  Duration _animationDuration = Duration(milliseconds: 500);
   bool _isDark;
   final String title;
   final String description;

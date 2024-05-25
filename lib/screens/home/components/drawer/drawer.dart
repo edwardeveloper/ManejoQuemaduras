@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:proyectoaula/controllers/main-controller.dart';
 import 'package:proyectoaula/screens/home/components/drawer/items/items.dart';
 
+// ignore: must_be_immutable
 class HomeDrawer extends StatelessWidget {
   bool _isDark;
   @override
