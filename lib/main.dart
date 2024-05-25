@@ -9,10 +9,10 @@ import 'package:proyectoaula/screens/home/burns.dart';
 import 'package:proyectoaula/screens/home/cicatrization.dart';
 import 'package:proyectoaula/screens/home/grafttypes.dart';
 import 'package:proyectoaula/screens/home/supplies.dart';
+import 'package:proyectoaula/screens/home/instrumental.dart';
 import 'package:proyectoaula/screens/home/treatments.dart';
-// import 'package:proyectoaula/screens/new-task/new-task.dart';
+import 'package:proyectoaula/screens/home/bibliography.dart';
 import 'package:proyectoaula/screens/loading/loading.dart';
-// import 'package:proyectoaula/screens/welcome/welcome.dart';
 
 void main() {
   runApp(App());
@@ -39,10 +39,9 @@ class App extends StatelessWidget {
         cicatrization_route: (context) => CicatrizationScreen(),
         grafttypes_route: (context) => GraftTypesScreen(),
         supplies_route: (context) => SuppliesScreen(),
+        instrumental_route: (context) => InstrumentalScreen(),
         treatments_route: (context) => TreatmentsScreen(),
-
-        // welcome_route: (context) => WelcomeScreen(),
-        // newtask_route: (context) => NewTaskScreen(),
+        bibliography_route: (context) => BibliographyScreen(),
       },
     );
   }

@@ -38,7 +38,7 @@ class DrawerItems extends StatelessWidget {
             }),
         HomeDrawerItem(
             title: "Cicatrización",
-            icon: FontAwesomeIcons.plusCircle,
+            icon: FontAwesomeIcons.handPaper,
             onTap: () async {
               Get.find<HomeController>().advancedDrawerController.hideDrawer();
               await Future.delayed(Duration(milliseconds: 420));
@@ -52,26 +52,21 @@ class DrawerItems extends StatelessWidget {
               await Future.delayed(Duration(milliseconds: 420));
               Navigator.pushNamed(context, grafttypes_route);
             }),
-        // HomeDrawerItem(
-        //     title: "Delete all tasks",
-        //     icon: FontAwesomeIcons.solidTrashAlt,
-        //     onTap: () async {
-        //       Get.find<HomeController>().advancedDrawerController.hideDrawer();
-        //       await Future.delayed(Duration(milliseconds: 420));
-        //       showDialog(
-        //         context: context,
-        //         builder: (context) {
-        //           return RemoveAllTasksDialog();
-        //         },
-        //       );
-        //     }),
         HomeDrawerItem(
-            title: "Insumos e instrumental",
-            icon: FontAwesomeIcons.crutch,
+            title: "Insumos",
+            icon: FontAwesomeIcons.syringe,
             onTap: () async {
               Get.find<HomeController>().advancedDrawerController.hideDrawer();
               await Future.delayed(Duration(milliseconds: 420));
               Navigator.pushNamed(context, supplies_route);
+            }),
+        HomeDrawerItem(
+            title: "instrumental",
+            icon: FontAwesomeIcons.crutch,
+            onTap: () async {
+              Get.find<HomeController>().advancedDrawerController.hideDrawer();
+              await Future.delayed(Duration(milliseconds: 420));
+              Navigator.pushNamed(context, instrumental_route);
             }),
         // HomeDrawerItem(
         //     title: "Support",
@@ -86,6 +81,14 @@ class DrawerItems extends StatelessWidget {
               Get.find<HomeController>().advancedDrawerController.hideDrawer();
               await Future.delayed(Duration(milliseconds: 420));
               Navigator.pushNamed(context, treatments_route);
+            }),
+        HomeDrawerItem(
+            title: "Bibliografía",
+            icon: FontAwesomeIcons.bookmark,
+            onTap: () async {
+              Get.find<HomeController>().advancedDrawerController.hideDrawer();
+              await Future.delayed(Duration(milliseconds: 420));
+              Navigator.pushNamed(context, bibliography_route);
             }),
         HomeDrawerItem(
             title: "Salir",

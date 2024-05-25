@@ -10,8 +10,6 @@ import 'package:proyectoaula/screens/home/components/drawer/drawer.dart';
 import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'package:proyectoaula/screens/home/components/title-anatomy.dart';
 
-import 'components/tasks/task-anatomy.dart';
-
 class AnatomyScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =
@@ -273,14 +271,16 @@ class AnatomyScreen extends StatelessWidget {
                                       ? kBackgroundColor.withOpacity(0.8)
                                       : Colors.black.withOpacity(0.8))),
                           TextSpan(
-                              text:
-                                  ' La porción más profunda y gruesa, compuesta por tejido conectivo, es vascularizada. Formado principalmente por colágeno y elastinas de los fibroblastos, y sustento a la piel.',
-                              style: TextStyle(
-                                  fontSize: 18.5,
-                                  fontWeight: FontWeight.bold,
-                                  color: _isDark
-                                      ? kBackgroundColor.withOpacity(0.5)
-                                      : Colors.black.withOpacity(0.3))),
+                            text:
+                                ' La porción más profunda y gruesa, compuesta por tejido conectivo, es vascularizada. Formado principalmente por colágeno y elastinas de los fibroblastos, y sustento a la piel.',
+                            style: TextStyle(
+                              fontSize: 18.5,
+                              fontWeight: FontWeight.bold,
+                              color: _isDark
+                                  ? kBackgroundColor.withOpacity(0.5)
+                                  : Colors.black.withOpacity(0.3),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -324,9 +324,6 @@ class AnatomyScreen extends StatelessWidget {
                 ],
               ),
             )),
-            // floatingActionButton: Padding(
-            //     padding: const EdgeInsets.only(right: 15, bottom: 25),
-            //     child: HomeFloatingButton()),
           ),
         );
       },

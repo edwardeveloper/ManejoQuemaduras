@@ -474,9 +474,6 @@ class BurnsScreen extends StatelessWidget {
                 ],
               ),
             )),
-            // floatingActionButton: Padding(
-            //     padding: const EdgeInsets.only(right: 15, bottom: 25),
-            //     child: HomeFloatingButton()),
           ),
         );
       },

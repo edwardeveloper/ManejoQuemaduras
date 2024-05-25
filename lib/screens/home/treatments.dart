@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:proyectoaula/constants/colors.dart';
 import 'package:proyectoaula/constants/types.dart';
 import 'package:proyectoaula/models/set-system-overlay-style.dart';
@@ -376,454 +377,644 @@ class TreatmentsScreen extends StatelessWidget {
                   HomeNavbar(),
                   TreatmentsTitleText(),
                   // TreatmentsTasks(),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Tratamiento quirúrgico de pacientes quemados en extremidades superiores",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
+                  Card(
+                    // Set the shape of the card using a rounded rectangle border with a 8 pixel radius
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Escarotomías y desbridamiento:",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[0]["step"],
-                    description: treatments1[0]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[1]["step"].toString(),
-                    description: treatments1[1]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[2]["step"].toString(),
-                    description: treatments1[2]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[3]["step"].toString(),
-                    description: treatments1[3]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[4]["step"].toString(),
-                    description: treatments1[4]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[5]["step"].toString(),
-                    description: treatments1[5]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[6]["step"].toString(),
-                    description: treatments1[6]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[7]["step"].toString(),
-                    description: treatments1[7]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[8]["step"].toString(),
-                    description: treatments1[8]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[9]["step"].toString(),
-                    description: treatments1[9]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[10]["step"].toString(),
-                    description: treatments1[10]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[11]["step"].toString(),
-                    description: treatments1[11]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[12]["step"].toString(),
-                    description: treatments1[12]["description"],
-                  ),
+                    // Set the clip behavior of the card
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    margin: EdgeInsets.all(25),
+                    elevation: 0,
+                    color: _isDark
+                        ? kBackgroundColor.withOpacity(0.2)
+                        : Color.fromARGB(255, 151, 142, 142).withOpacity(0.2),
+                    // Define the child widgets of the card
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        // Display an image at the top of the card that fills the width of the card and has a height of 160 pixels
+                        // Image.asset(
+                        //   'assets/images/injertoparcial.jpg',
+                        //   height: 310,
+                        //   width: double.infinity,
+                        //   fit: BoxFit.cover,
+                        // ),
+                        // Add a container with padding that contains the card's title, text, and buttons
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              // Display the card's title using a font size of 24 and a dark grey color
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Tratamiento quirúrgico de pacientes quemados en extremidades superiores",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(1)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Escarotomías y desbridamiento:",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[0]["step"],
+                                description: treatments1[0]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[1]["step"].toString(),
+                                description: treatments1[1]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[2]["step"].toString(),
+                                description: treatments1[2]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[3]["step"].toString(),
+                                description: treatments1[3]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[4]["step"].toString(),
+                                description: treatments1[4]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[5]["step"].toString(),
+                                description: treatments1[5]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[6]["step"].toString(),
+                                description: treatments1[6]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[7]["step"].toString(),
+                                description: treatments1[7]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[8]["step"].toString(),
+                                description: treatments1[8]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[9]["step"].toString(),
+                                description: treatments1[9]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[10]["step"].toString(),
+                                description: treatments1[10]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[11]["step"].toString(),
+                                description: treatments1[11]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[12]["step"].toString(),
+                                description: treatments1[12]["description"],
+                              ),
 
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Desbridamiento:",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Desbridamiento:",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
 
-                  TreatmentsTasks(
-                    title: treatments1[13]["step"].toString(),
-                    description: treatments1[13]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[14]["step"].toString(),
-                    description: treatments1[14]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments1[15]["step"].toString(),
-                    description: treatments1[15]["description"],
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 25, bottom: 25),
-                    child: Image.asset('assets/images/1.jpeg', width: 350),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(top: 25, bottom: 25),
-                    child: Image.asset('assets/images/2.jpeg', width: 350),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Tratamiento quirúrgico de pacientes quemados en extremidades inferiores",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Escarotomías y desbridamiento: ",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[0]["step"],
-                    description: treatments2[0]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[1]["step"],
-                    description: treatments2[1]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[2]["step"],
-                    description: treatments2[2]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[3]["step"],
-                    description: treatments2[3]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[4]["step"],
-                    description: treatments2[4]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[5]["step"],
-                    description: treatments2[5]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[6]["step"],
-                    description: treatments2[6]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[7]["step"],
-                    description: treatments2[7]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[8]["step"],
-                    description: treatments2[8]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[9]["step"],
-                    description: treatments2[9]["description"],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Injertos: ",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[10]["step"],
-                    description: treatments2[10]["description"],
-                  ),
-
-                  TreatmentsTasks(
-                    title: treatments2[11]["step"],
-                    description: treatments2[11]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[12]["step"],
-                    description: treatments2[12]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[13]["step"],
-                    description: treatments2[13]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[14]["step"],
-                    description: treatments2[14]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[15]["step"],
-                    description: treatments2[15]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[16]["step"],
-                    description: treatments2[16]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[17]["step"],
-                    description: treatments2[17]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[18]["step"],
-                    description: treatments2[18]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[19]["step"],
-                    description: treatments2[19]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments2[20]["step"],
-                    description: treatments2[20]["description"],
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Tratamiento quirúrgico de pacientes quemados en tórax",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "El objetivo del tratamiento quirúrgico de las secuelas por quemaduras torácicas es, por una parte, en todos los pacientes, restaurar una cobertura cutánea flexible y funcional y, por otra parte, recuperar la estética de la región mamaria en las mujeres adultas y permitir el crecimiento mamario en las niñas.",
-                      style: TextStyle(
-                          fontSize: 18.5,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.5)
-                              : Colors.black.withOpacity(0.3)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Escarotomías y desbridamiento: ",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  TreatmentsTasks(
-                    title: treatments3[0]["step"],
-                    description: treatments3[0]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments3[1]["step"],
-                    description: treatments3[1]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments3[2]["step"],
-                    description: treatments3[2]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments3[3]["step"],
-                    description: treatments3[3]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments3[4]["step"],
-                    description: treatments3[4]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments3[5]["step"],
-                    description: treatments3[5]["description"],
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Tratamiento quirúrgico de pacientes quemados en zona facial",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Es fundamental preservar desde el estadio agudo todos los elementos constitutivos de la estética facial: piel lisa y de color homogéneo, relieves y contornos armoniosos y simétricos.",
-                      style: TextStyle(
-                          fontSize: 18.5,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.5)
-                              : Colors.black.withOpacity(0.3)),
-                      maxLines: 10,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Escarotomías y desbridamiento: ",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
+                              TreatmentsTasks(
+                                title: treatments1[13]["step"].toString(),
+                                description: treatments1[13]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[14]["step"].toString(),
+                                description: treatments1[14]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments1[15]["step"].toString(),
+                                description: treatments1[15]["description"],
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 25, bottom: 25),
+                                child: Image.asset('assets/images/1.jpeg',
+                                    width: 350),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.only(top: 25, bottom: 25),
+                                child: Image.asset('assets/images/2.jpeg',
+                                    width: 350),
+                              ),
+                              Container(height: 10),
+                            ],
+                          ),
+                        ),
+                        // Add a small space between the card and the next widget
+                        Container(height: 5),
+                      ],
                     ),
                   ),
 
-                  TreatmentsTasks(
-                    title: treatments4[0]["step"],
-                    description: treatments4[0]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[1]["step"],
-                    description: treatments4[1]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[2]["step"],
-                    description: treatments4[2]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[3]["step"],
-                    description: treatments4[3]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[4]["step"],
-                    description: treatments4[4]["description"],
-                  ),
-
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        left: 25.0, right: 25.0, top: 15.0, bottom: 20.0),
-                    child: Text(
-                      "Injerto: ",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: _isDark
-                              ? kBackgroundColor.withOpacity(0.8)
-                              : Colors.black.withOpacity(0.8)),
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
+                  Card(
+                    // Set the shape of the card using a rounded rectangle border with a 8 pixel radius
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    // Set the clip behavior of the card
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    margin: EdgeInsets.all(25),
+                    elevation: 0,
+                    color: _isDark
+                        ? kBackgroundColor.withOpacity(0.2)
+                        : Color.fromARGB(255, 151, 142, 142).withOpacity(0.2),
+                    // Define the child widgets of the card
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        // Display an image at the top of the card that fills the width of the card and has a height of 160 pixels
+                        // Image.asset(
+                        //   'assets/images/injertoparcial.jpg',
+                        //   height: 310,
+                        //   width: double.infinity,
+                        //   fit: BoxFit.cover,
+                        // ),
+                        // Add a container with padding that contains the card's title, text, and buttons
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Tratamiento quirúrgico de pacientes quemados en extremidades inferiores",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(1)
+                                          : Colors.black.withOpacity(1)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Escarotomías y desbridamiento: ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[0]["step"],
+                                description: treatments2[0]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[1]["step"],
+                                description: treatments2[1]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[2]["step"],
+                                description: treatments2[2]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[3]["step"],
+                                description: treatments2[3]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[4]["step"],
+                                description: treatments2[4]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[5]["step"],
+                                description: treatments2[5]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[6]["step"],
+                                description: treatments2[6]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[7]["step"],
+                                description: treatments2[7]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[8]["step"],
+                                description: treatments2[8]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[9]["step"],
+                                description: treatments2[9]["description"],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Injertos: ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[10]["step"],
+                                description: treatments2[10]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[11]["step"],
+                                description: treatments2[11]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[12]["step"],
+                                description: treatments2[12]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[13]["step"],
+                                description: treatments2[13]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[14]["step"],
+                                description: treatments2[14]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[15]["step"],
+                                description: treatments2[15]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[16]["step"],
+                                description: treatments2[16]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[17]["step"],
+                                description: treatments2[17]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[18]["step"],
+                                description: treatments2[18]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[19]["step"],
+                                description: treatments2[19]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments2[20]["step"],
+                                description: treatments2[20]["description"],
+                              ),
+                              Container(height: 10),
+                            ],
+                          ),
+                        ),
+                        // Add a small space between the card and the next widget
+                        Container(height: 5),
+                      ],
                     ),
                   ),
-                  TreatmentsTasks(
-                    title: treatments4[5]["step"],
-                    description: treatments4[5]["description"],
+
+                  Card(
+                    // Set the shape of the card using a rounded rectangle border with a 8 pixel radius
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    // Set the clip behavior of the card
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    margin: EdgeInsets.all(25),
+                    elevation: 0,
+                    color: _isDark
+                        ? kBackgroundColor.withOpacity(0.2)
+                        : Color.fromARGB(255, 151, 142, 142).withOpacity(0.2),
+                    // Define the child widgets of the card
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        // Display an image at the top of the card that fills the width of the card and has a height of 160 pixels
+                        // Image.asset(
+                        //   'assets/images/injertoparcial.jpg',
+                        //   height: 310,
+                        //   width: double.infinity,
+                        //   fit: BoxFit.cover,
+                        // ),
+                        // Add a container with padding that contains the card's title, text, and buttons
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              // Display the card's title using a font size of 24 and a dark grey color
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Tratamiento quirúrgico de pacientes quemados en tórax",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(1)
+                                          : Colors.black.withOpacity(1)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "El objetivo del tratamiento quirúrgico de las secuelas por quemaduras torácicas es, por una parte, en todos los pacientes, restaurar una cobertura cutánea flexible y funcional y, por otra parte, recuperar la estética de la región mamaria en las mujeres adultas y permitir el crecimiento mamario en las niñas.",
+                                  style: TextStyle(
+                                      fontSize: 18.5,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.5)
+                                          : Colors.black.withOpacity(0.3)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Escarotomías y desbridamiento: ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              TreatmentsTasks(
+                                title: treatments3[0]["step"],
+                                description: treatments3[0]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments3[1]["step"],
+                                description: treatments3[1]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments3[2]["step"],
+                                description: treatments3[2]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments3[3]["step"],
+                                description: treatments3[3]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments3[4]["step"],
+                                description: treatments3[4]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments3[5]["step"],
+                                description: treatments3[5]["description"],
+                              ),
+                              Container(height: 10),
+                            ],
+                          ),
+                        ),
+                        // Add a small space between the card and the next widget
+                        Container(height: 5),
+                      ],
+                    ),
                   ),
-                  TreatmentsTasks(
-                    title: treatments4[6]["step"],
-                    description: treatments4[6]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[7]["step"],
-                    description: treatments4[7]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[8]["step"],
-                    description: treatments4[8]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[9]["step"],
-                    description: treatments4[9]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[10]["step"],
-                    description: treatments4[10]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[11]["step"],
-                    description: treatments4[11]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[12]["step"],
-                    description: treatments4[12]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[13]["step"],
-                    description: treatments4[13]["description"],
-                  ),
-                  TreatmentsTasks(
-                    title: treatments4[14]["step"],
-                    description: treatments4[14]["description"],
+
+                  Card(
+                    // Set the shape of the card using a rounded rectangle border with a 8 pixel radius
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    // Set the clip behavior of the card
+                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                    margin: EdgeInsets.all(25),
+                    elevation: 0,
+                    color: _isDark
+                        ? kBackgroundColor.withOpacity(0.2)
+                        : Color.fromARGB(255, 151, 142, 142).withOpacity(0.2),
+                    // Define the child widgets of the card
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        // Display an image at the top of the card that fills the width of the card and has a height of 160 pixels
+                        // Image.asset(
+                        //   'assets/images/injertoparcial.jpg',
+                        //   height: 310,
+                        //   width: double.infinity,
+                        //   fit: BoxFit.cover,
+                        // ),
+                        // Add a container with padding that contains the card's title, text, and buttons
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Tratamiento quirúrgico de pacientes quemados en zona facial",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Es fundamental preservar desde el estadio agudo todos los elementos constitutivos de la estética facial: piel lisa y de color homogéneo, relieves y contornos armoniosos y simétricos.",
+                                  style: TextStyle(
+                                      fontSize: 18.5,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.5)
+                                          : Colors.black.withOpacity(0.3)),
+                                  maxLines: 10,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Escarotomías y desbridamiento: ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[0]["step"],
+                                description: treatments4[0]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[1]["step"],
+                                description: treatments4[1]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[2]["step"],
+                                description: treatments4[2]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[3]["step"],
+                                description: treatments4[3]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[4]["step"],
+                                description: treatments4[4]["description"],
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 25.0,
+                                    right: 25.0,
+                                    top: 15.0,
+                                    bottom: 20.0),
+                                child: Text(
+                                  "Injerto: ",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: _isDark
+                                          ? kBackgroundColor.withOpacity(0.8)
+                                          : Colors.black.withOpacity(0.8)),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[5]["step"],
+                                description: treatments4[5]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[6]["step"],
+                                description: treatments4[6]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[7]["step"],
+                                description: treatments4[7]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[8]["step"],
+                                description: treatments4[8]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[9]["step"],
+                                description: treatments4[9]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[10]["step"],
+                                description: treatments4[10]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[11]["step"],
+                                description: treatments4[11]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[12]["step"],
+                                description: treatments4[12]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[13]["step"],
+                                description: treatments4[13]["description"],
+                              ),
+                              TreatmentsTasks(
+                                title: treatments4[14]["step"],
+                                description: treatments4[14]["description"],
+                              ),
+                              Container(height: 10),
+                            ],
+                          ),
+                        ),
+                        // Add a small space between the card and the next widget
+                        Container(height: 5),
+                      ],
+                    ),
                   ),
                 ],
               ),
             )),
-            // floatingActionButton: Padding(
-            //     padding: const EdgeInsets.only(right: 15, bottom: 25),
-            //     child: HomeFloatingButton()),
           ),
         );
       },

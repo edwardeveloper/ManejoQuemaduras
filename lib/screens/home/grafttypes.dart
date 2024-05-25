@@ -9,7 +9,6 @@ import 'package:proyectoaula/screens/home/animations.dart';
 import 'package:proyectoaula/controllers/home/home-controller.dart';
 import 'package:proyectoaula/screens/home/components/drawer/drawer.dart';
 import 'package:proyectoaula/screens/home/components/navbar.dart';
-import 'components/tasks/task-grafttype.dart';
 import 'components/title-grafttypes.dart';
 
 class GraftTypesScreen extends StatelessWidget {
@@ -530,9 +529,6 @@ class GraftTypesScreen extends StatelessWidget {
                 ],
               ),
             )),
-            // floatingActionButton: Padding(
-            //     padding: const EdgeInsets.only(right: 15, bottom: 25),
-            //     child: HomeFloatingButton()),
           ),
         );
       },

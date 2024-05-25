@@ -12,7 +12,7 @@ import 'package:proyectoaula/screens/home/components/navbar.dart';
 import 'components/tasks/task-supplies.dart';
 import 'components/title-supplies.dart';
 
-class SuppliesScreen extends StatelessWidget {
+class InstrumentalScreen extends StatelessWidget {
   HomeController homeController = Get.put(HomeController());
   HomeAnimationsController homeAnimationsController =
       Get.put(HomeAnimationsController());
@@ -136,95 +136,47 @@ class SuppliesScreen extends StatelessWidget {
           child: Scaffold(
             backgroundColor: _isDark ? kDarkBackgroundColor2 : kBackgroundColor,
             body: SafeArea(
-              child: SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  children: [
-                    HomeNavbar(),
-                    SuppliesTitleText(),
-                    Container(height: 25.0),
-                    SuppliesTasks(
-                      title: supplies[0]["title"],
-                      description: supplies[0]["description"],
-                      imageUrl: supplies[0]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[1]["title"],
-                      description: supplies[1]["description"],
-                      imageUrl: supplies[1]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[2]["title"],
-                      description: supplies[2]["description"],
-                      imageUrl: supplies[2]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[3]["title"],
-                      description: supplies[3]["description"],
-                      imageUrl: supplies[3]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[4]["title"],
-                      description: supplies[4]["description"],
-                      imageUrl: supplies[4]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[5]["title"],
-                      description: supplies[5]["description"],
-                      imageUrl: supplies[5]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[6]["title"],
-                      description: supplies[6]["description"],
-                      imageUrl: supplies[6]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[7]["title"],
-                      description: supplies[7]["description"],
-                      imageUrl: supplies[7]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: supplies[0]["title"],
-                      description: supplies[0]["description"],
-                      imageUrl: supplies[0]["image"],
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 20, left: 25),
-                      child: RichText(
-                        text: TextSpan(
-                          text: "Equipos e instrumental especializados",
-                          style: GoogleFonts.ubuntu(
-                            fontSize: 30,
-                            color: _isDark ? kBackgroundColor : Colors.black,
-                            fontWeight: FontWeight.w700,
-                          ),
+                child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  HomeNavbar(),
+                  Padding(
+                    padding: EdgeInsets.only(left: 25),
+                    child: RichText(
+                      text: TextSpan(
+                        text: "Equipos e instrumental especializados",
+                        style: GoogleFonts.ubuntu(
+                          fontSize: 30,
+                          color: _isDark ? kBackgroundColor : Colors.black,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                     ),
-                    SuppliesTasks(
-                      title: instrumental[0]["title"],
-                      description: instrumental[0]["description"],
-                      imageUrl: instrumental[0]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[1]["title"],
-                      description: instrumental[1]["description"],
-                      imageUrl: instrumental[1]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[2]["title"],
-                      description: instrumental[2]["description"],
-                      imageUrl: instrumental[2]["image"],
-                    ),
-                    SuppliesTasks(
-                      title: instrumental[3]["title"],
-                      description: instrumental[3]["description"],
-                      imageUrl: instrumental[3]["image"],
-                    ),
-                  ],
-                ),
+                  ),
+                  SuppliesTasks(
+                    title: instrumental[0]["title"],
+                    description: instrumental[0]["description"],
+                    imageUrl: instrumental[0]["image"],
+                  ),
+                  SuppliesTasks(
+                    title: instrumental[1]["title"],
+                    description: instrumental[1]["description"],
+                    imageUrl: instrumental[1]["image"],
+                  ),
+                  SuppliesTasks(
+                    title: instrumental[2]["title"],
+                    description: instrumental[2]["description"],
+                    imageUrl: instrumental[2]["image"],
+                  ),
+                  SuppliesTasks(
+                    title: instrumental[3]["title"],
+                    description: instrumental[3]["description"],
+                    imageUrl: instrumental[3]["image"],
+                  ),
+                ],
               ),
-            ),
+            )),
           ),
         );
       },
